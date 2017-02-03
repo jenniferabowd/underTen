@@ -1,0 +1,12 @@
+{
+  "development": {
+    "password": null,
+    "database": "usermeals_app_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "dialect": "postgres",
+    "use_env_variables": "DATABASE_URL"
+  }
+}
