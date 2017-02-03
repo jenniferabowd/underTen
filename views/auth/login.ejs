@@ -14,9 +14,19 @@
     </header>
     <main>
       <div class="container">
-        <p>Welcome to UNDER $10</p>
-        <p><a href="/auth/register">click here to register</a></p>
-        <p><a href="/auth/login">click here to log in</a></p>
+        <form action="/auth/login" method="post">
+          <div>
+            <label>Username:</label>
+            <input type="text" name="username"/>
+          </div>
+          <div>
+            <label>Password:</label>
+            <input type="password" name="password"/>
+          </div>
+          <div>
+            <input type="submit" value="Log In"/>
+          </div>
+        </form>
       </div>
     </main>
     <footer>
