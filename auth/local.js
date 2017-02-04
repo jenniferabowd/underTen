@@ -1,13 +1,13 @@
-// calls passport file within auth
+// requires passport file within auth
 const passport = require('passport');
-// calls passport-local node
+// requires passport-local node
 const LocalStrategy = require('passport-local').Strategy;
 
-// creates another passport variable to start passport node
+// creates another passport variable to start passport node, also requires the passport node
 const init = require('./passport');
-// calls the database index
+// requires the database index
 const models = require('../db/models/index');
-// calls the auth helps file from within auth
+// requires the auth helps file from within auth
 const authHelpers = require('../auth/auth-helpers');
 
 const options = {};

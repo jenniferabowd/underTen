@@ -1,6 +1,6 @@
 // requires the passport file
 const passport = require('passport');
-// calls the database index
+// requires the database index
 const models = require('../db/models/index');
 
 // exports the user id to the passport
