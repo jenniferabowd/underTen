@@ -39,3 +39,5 @@ router.get('/meals', function(req, res, next) {
 //    });
 //   });
 // });
+
+module.exports = router;
