@@ -21,7 +21,6 @@ function createUser(req, res) {
   const hash = bcrypt.hashSync(req.body.password, salt);
 
   return models.Users.create({
-    user_id: req.body.user_id,
     email: req.body.email,
     password: hash,
     first_name: req.body.first_name,
