@@ -25,8 +25,8 @@ function createUser(req, res) {
   return models.User.create({
     email: req.body.email,
     password: hash,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    firstName: req.body.first_name,
+    lastName: req.body.last_name,
     course: req.body.course
   }).then(() => {
     // sends them to the meal page after creating the account

@@ -9,7 +9,7 @@ var passport = require('passport');
 var methodOverride = require('method-override');
 
 var index = require('./routes/index');
-var auth = require('./routes/auth');
+var authRoutes = require('./routes/auth');
 var index = require('./routes/index');
 var meals = require('./routes/meals');
 
