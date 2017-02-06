@@ -27,8 +27,7 @@ router.get('/login', authHelpers.loginRedirect, (req, res) => {
   res.render('auth/login');
 });
 
-// route handler based on if the user is logged in
-router.post('/login', passport.authenticate('passport', {
+router.post('/login', passport.authenticate('local', {
     successRedirect: '/meals',
     failureRedirect: '/auth/login',
     failureFlash: true

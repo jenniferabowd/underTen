@@ -35,7 +35,6 @@ function createUser(req, res) {
 // redirects unlogged in users to login
 function loginRequired(req, res, next) {
   if (!req.user) res.redirect('/auth/login');
-
   return next();
 }
 
