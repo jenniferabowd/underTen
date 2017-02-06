@@ -8,11 +8,9 @@ const models = require('../db/models/index');
   return bcrypt.compareSync(userPassword, databasePassword);
  }
 
- // middleware that we wrote to say that the user is already logged in
+ // middleware that we wrote to take the user to the meals page
 function loginRedirect(req, res, next) {
-  if (req.user) return res.status(401).json(
-    { status: 'You are already logged in' }
-  );
+  if (req.user) res.redirect('/meals');
   // calls the next middleware to do what it needs to do
   return next();
 }
@@ -36,7 +34,8 @@ function createUser(req, res) {
 
 // redirects unlogged in users to login
 function loginRequired(req, res, next) {
-  if (!req.user) return res.status(401).json({ status: 'Please log in to find the meals'});
+  if (!req.user) res.redirect('/auth/login');
+
   return next();
 }
 
