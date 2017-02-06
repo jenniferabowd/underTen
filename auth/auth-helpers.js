@@ -41,7 +41,7 @@ function loginRequired(req, res, next) {
 
 module.exports = {
   comparePass,
+  createUser,
   loginRedirect,
-  loginRequired,
-  createUser
+  loginRequired
 }
