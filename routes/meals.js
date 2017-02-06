@@ -4,7 +4,7 @@ var router = express.Router();
 var models = require('../db/models/index');
 
 //Route to get home page
-router.get('/meals', function(req, res, next) {
+router.get('/', function(req, res, next) {
   models.Meals.findAll({}).then(function(meals) {
     res.render('meals/index',  {
       meals: meals
