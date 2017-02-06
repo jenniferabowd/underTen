@@ -8,11 +8,9 @@ const models = require('../db/models/index');
   return bcrypt.compareSync(userPassword, databasePassword);
  }
 
- // middleware that we wrote to say that the user is already logged in
+ // middleware that we wrote to take the user to the meals page
 function loginRedirect(req, res, next) {
-  if (req.user) return res.status(401).json(
-    { status: 'You are already logged in' }
-  );
+  if (req.users) res.redirect('/meals');
   // calls the next middleware to do what it needs to do
   return next();
 }
@@ -25,8 +23,8 @@ function createUser(req, res) {
   return models.Users.create({
     email: req.body.email,
     password: hash,
-    firstName: req.body.first_name,
-    lastName: req.body.last_name,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
     course: req.body.course
   }).then(() => {
     // sends them to the meal page after creating the account
@@ -36,13 +34,13 @@ function createUser(req, res) {
 
 // redirects unlogged in users to login
 function loginRequired(req, res, next) {
-  if (!req.user) return res.status(401).json({ status: 'Please log in to find the meals'});
+  if (!req.user) res.redirect('/auth/login');
   return next();
 }
 
 module.exports = {
   comparePass,
+  createUser,
   loginRedirect,
-  loginRequired,
-  createUser
+  loginRequired
 }

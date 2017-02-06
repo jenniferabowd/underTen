@@ -22,15 +22,15 @@ passport.use(new LocalStrategy(options, (email, password, done) => {
       email
     }
   })
-  .then((user) => {
-    if (user[0] === undefined) {
+  .then((users) => {
+    if (users[0] === undefined) {
       return done(null, false);
     }
     // compares the password entered to the password in the database
-    if (!authHelpers.comparePass(password, user[0].dataValues.password)) {
+    if (!authHelpers.comparePass(password, users[0].dataValues.password)) {
       return done(null, false);
     } else {
-      return done(null, user[0].dataValues);
+      return done(null, users[0].dataValues);
     }
   })
   .catch((err) => { return done(err); });
