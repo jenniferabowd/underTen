@@ -5,6 +5,17 @@
   <title>Under $10</title>
 </head>
 <body>
-  <h1>Meals Page Loads!</h1>
+  <h1>Meals List</h1>
+  <% meals.forEach(function(meals) { %>
+   <div>
+   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.meal_name %></span></p>
+   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.amount %></span></p>
+   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.restaurant_name %></span></p>
+   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.location %></span></p>
+   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.review %></span></p>
+   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.createdAt %></span></p>
+
+   </div>
+   <% }) %>
 </body>
 </html>

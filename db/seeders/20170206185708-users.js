@@ -12,6 +12,15 @@ module.exports = {
         course: 'WDI',
         createdAt: '2017-02-06',
         updatedAt: '2017-02-06'
+      },
+      {
+        first_name: 'Meka',
+        last_name: 'Villa',
+        email: 'johndoe1@yahoo.com',
+        password: 'dontknow',
+        course: 'WDI',
+        createdAt: '2017-02-06',
+        updatedAt: '2017-02-06'
       }
     ], {});
   }
