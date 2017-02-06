@@ -10,7 +10,7 @@ const models = require('../db/models/index');
 
  // middleware that we wrote to take the user to the meals page
 function loginRedirect(req, res, next) {
-  if (req.user) res.redirect('/meals');
+  if (req.users) res.redirect('/meals');
   // calls the next middleware to do what it needs to do
   return next();
 }
