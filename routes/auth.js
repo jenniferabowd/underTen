@@ -6,7 +6,7 @@ const router = express.Router();
 // requires the authHelpers file
 const authHelpers = require('../auth/auth-helpers');
 // requires the local file
-const local = require('../auth/local');
+const passport = require('../auth/local');
 
 // renders the register page
 router.get('/register', authHelpers.loginRedirect, (req, res) => {
@@ -28,7 +28,7 @@ router.get('/login', authHelpers.loginRedirect, (req, res) => {
 });
 
 // route handler based on if the user is logged in
-router.post('/login', local.authenticate('local', {
+router.post('/login', passport.authenticate('local', {
     successRedirect: '/meals',
     failureRedirect: '/auth/login',
     failureFlash: true
