@@ -12,6 +12,9 @@ input, button {
   outline: none;
   border: none;
 }
+h1 {
+  font-family: 'Lobster', cursive;
+}
  .cont {
    position: relative;
    height: 100%;

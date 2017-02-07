@@ -8,6 +8,11 @@ html, body {
      font-size: 50%;
    }*/
 }
+
+h1 {
+  text-align: center;
+
+}
 input, button {
   outline: none;
   border: none;
@@ -73,13 +78,13 @@ input, button {
     width: 100%;
     height: 4rem;
     margin: 5rem 0 2.2rem;
-    color: rgba(255,255,255,0.8);
-    background: orange;
+    color: #3949ab indigo-text darken-1-text;
+    background: #ffd54f amber lighten-2;
     font-size: 1.5rem;
     border-radius: 3rem;
   }
-
-  .login__register {
+  /*on hold until functionality is complete*/
+  /*.login__register {
     position: absolute;
     width: 100%;
     height: 4rem;
@@ -88,6 +93,6 @@ input, button {
     background: red;
     font-size: 1.5rem;
     border-radius: 3rem;
-  }
+  }*/
 
 /*# sourceMappingURL=style.css.map */
