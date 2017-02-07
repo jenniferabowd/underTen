@@ -1,4 +1,4 @@
-/*$openSans: 'Open Sans', Helvetica, Arial, sans-serif;*/
+
 html, body {
   font-size: 62.5%;
   height: 100%;
@@ -10,7 +10,12 @@ html, body {
 }
 
 h1 {
+  font-family: 'Lobster' ,cursive;
   text-align: center;
+  color:  #ffd54f;
+  font-size:86px;
+  letter-spacing: 6px;
+
 
 }
 input, button {
@@ -57,13 +62,13 @@ input, button {
     text-align: center;
   }
 
-  .login__row {
+  /*.login__row {
     height: 5rem;
     padding-top: 1rem;
     border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
+  }*/
   /*login__input=text input*/
-  .login__input {
+ /* .login__input {
     display: inline-block;
     width: 22rem;
     height: 100%;
@@ -71,7 +76,7 @@ input, button {
     font-size: 1.5rem;
     background: transparent;
     color: #FDFCFD;
-  }
+  }*/
   /*submit button*/
   .login__submit {
     position: relative;
