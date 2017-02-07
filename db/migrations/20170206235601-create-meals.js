@@ -9,16 +9,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       meal_name: {
-        type: Sequelize.STRING(150)
+        type: Sequelize.TEXT
       },
       amount: {
-        type: Sequelize.INTEGER
+        type: Sequelize.TEXT
       },
       restaurant_name: {
         type: Sequelize.TEXT
       },
       location: {
-        type: Sequelize.STRING(200)
+        type: Sequelize.TEXT
       },
       review: {
         type: Sequelize.TEXT

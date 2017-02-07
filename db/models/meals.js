@@ -1,10 +1,10 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Meals = sequelize.define('Meals', {
-    meal_name: DataTypes.STRING(150),
-    amount: DataTypes.INTEGER,
+    meal_name: DataTypes.TEXT,
+    amount: DataTypes.TEXT,
     restaurant_name: DataTypes.TEXT,
-    location: DataTypes.STRING(200),
+    location: DataTypes.TEXT,
     review: DataTypes.TEXT
   }, {
     classMethods: {

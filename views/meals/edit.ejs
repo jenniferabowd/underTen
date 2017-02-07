@@ -5,6 +5,14 @@
   <title>Under $10</title>
 </head>
 <body>
-  <h1>Edit route works</h1>
+  <h1>Edit Meals</h1><br />
+  <form action="<%= '/meals/' + meals.id +'?_method=PUT' %>" method="POST">
+  <label>Meals:
+  <input type="text" name="Meals" value= "<%=meals.meal_name%>" />
+  </label>
+  <input type="submit" value="Edit">
+  </form> <br />
+  <a href="/meals">Back to Meals Page</a><br/>
+<a href="/meals/<%=meals.id %>">Back to Meals</a><br/>
 </body>
 </html>
