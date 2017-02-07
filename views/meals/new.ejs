@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-  <head>
-<!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-=======
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,7 +6,6 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
->>>>>>> 995a5ee73280774aed7a972000eaa37986372964
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
  <!--Import Google Icon Font-->
@@ -32,28 +25,37 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s6">
-          <input id="price" type="text" class="validate">
-          <label for="price">Price</label>
+          <input name="amount" type="text" class="validate">
+          <label for="amount">Price</label>
         </div>
         <div class="input-field col s6">
-          <input id="meal" type="text" class="validate">
-          <label for="meal">Meal</label>
+          <input name="meal_name" type="text" class="validate">
+          <label for="meal_name">Meal</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="restaurant" type="text" class="validate">
-          <label for="restaraunt">Restaurant</label>
+          <input name="restaurant_name" type="text" class="validate">
+          <label for="restaraunt_name">Restaurant</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="review" type="text" class="validate">
+          <input name="location" type="text" class="validate">
+          <label for="location">Location</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input name="review" type="text" class="validate">
           <label for="review">Review</label>
         </div>
       </div>
 
+      </div>
+      <div>
+            <input type="submit" value="add meal"/>
       </div>
     </form>
   </div>
