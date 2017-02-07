@@ -12,11 +12,20 @@ router.get('/', function(req, res, next) {
   });
 });
 
-// router.get('/:id/edit', function(req, res, next) {
-//   models.Meals.findById(req.params.id).then(function(meals) {
-//     res.render('meals/edit', { meals: meals});
-//   });
-// });
+router.get('/:mealid/edit', function(req, res, next) {
+  models.Meals.findById(req.params.mealid).then(function(meals) {
+    res.render('meals/edit', { meals: meals});
+  });
+});
+
+
+router.put('/:mealid', function(req, res, next) {
+  models.Meals.update({
+  name:req.body.meals
+  }, { where: { mealid: req.params.mealid } }).then(function() {
+    res.redirect('/meals/');
+  });
+});
 
 // router.get('/new', function(req, res, next) {
 //   res.render('new')
