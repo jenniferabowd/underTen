@@ -41,21 +41,23 @@
                   </ul>
             </div>
             <div class="card-action">
-              <a href="new">Add meal</a>
+              <a href="#">Add meal</a>
               <a href="#">Delete meal</a>
 
 
               <form action="<%= '/meals/' + meals.id + '?_method=DELETE' %>" method="POST">
                 <input type="submit" value="Delete" />
                   </form>
-
                   <form action="<%='/meals/' + meals.id + '/edit' %>" method="POST">
                 <input type="submit" value="Edit" />
-
               </form>
             </div>
+            <!-- <div class="card-action">
+              <a href="<%='/meals/' + meals.id + '/edit' %>" method="POST">Add meal</a>
+              <a href="<%= '/meals/' + meals.id + '?_method=DELETE' %>" method="POST" >Delete meal</a>
+            </div>
           </div>
-        </div>
+        </div> -->
 </body>
    <% }) %>
    <!-- <a class="waves-effect waves-light btn-large #3949ab indigo darken-1 float right">Add a Meal</a>
