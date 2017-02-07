@@ -9,8 +9,8 @@ module.exports = () => {
     done(null, users.userid);
   });
   // checks to see if the user is authorized
-  passport.deserializeUser((id, done) => {
-    models.Users.findById(id)
+  passport.deserializeUser((userid, done) => {
+    models.Users.findById(userid)
     .then((users) => { done(null, users); })
     .catch((err) => { done(err, null); });
   });

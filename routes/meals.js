@@ -13,17 +13,17 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/:id/edit', function(req, res, next) {
-  models.Meals.findById(req.params.id).then(function(meals) {
+router.get('/:mealid/edit', function(req, res, next) {
+  models.Meals.findById(req.params.mealid).then(function(meals) {
     res.render('meals/edit', { meals: meals});
   });
 });
 
 
-router.put('/:id', function(req, res, next) {
+router.put('/:mealid', function(req, res, next) {
   models.Meals.update({
   name:req.body.meals
-  }, { where: { id: req.params.id } }).then(function() {
+  }, { where: { mealid: req.params.mealid } }).then(function() {
     res.redirect('/meals/');
   });
 });

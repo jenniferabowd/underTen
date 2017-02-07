@@ -8,12 +8,12 @@
   <h1>Meals List</h1>
   <% meals.forEach(function(meals) { %>
    <div>
-   <a href= '<%= `/meals/${meals.id}` %>'><span><%= meals.meal_name %></span></a>
-   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.amount %></span></p>
-   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.restaurant_name %></span></p>
-   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.location %></span></p>
-   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.review %></span></p>
-   <p '<%= `/meals/${meals.id}` %>'><span><%= meals.createdAt %></span></p>
+   <a href= '<%= `/meals/${meals.mealid}` %>'><span><%= meals.meal_name %></span></a>
+   <p '<%= `/meals/${meals.mealid}` %>'><span><%= meals.amount %></span></p>
+   <p '<%= `/meals/${meals.mealid}` %>'><span><%= meals.restaurant_name %></span></p>
+   <p '<%= `/meals/${meals.mealid}` %>'><span><%= meals.location %></span></p>
+   <p '<%= `/meals/${meals.mealid}` %>'><span><%= meals.review %></span></p>
+   <p '<%= `/meals/${meals.mealid}` %>'><span><%= meals.createdAt %></span></p>
    </div>
    <% }) %>
 </body>
