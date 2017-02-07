@@ -1,12 +1,16 @@
 
-html, body {
-  font-size: 62.5%;
+html, body{
+  /*font-size: 62.5%;*/
   height: 100%;
   overflow: hidden;
 /*
    @media (max-width: 768px) {
      font-size: 50%;
    }*/
+}
+
+body {
+  font-size: 1rem;
 }
 
 h1 {
@@ -18,10 +22,24 @@ h1 {
 
 
 }
+
 input, button {
   outline: none;
   border: none;
 }
+
+.card-action form {
+  display: inline-block;
+}
+
+.card-action input[type=submit] {
+    -webkit-appearance: none;
+    background-color: blue;
+    border: none;
+    color: yellow;
+    margin-right: 2em;
+    text-transform: uppercase;
+  }
 
 
 /*cont=background*/

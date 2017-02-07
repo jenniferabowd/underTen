@@ -7,7 +7,7 @@ var authHelpers = require('../auth/auth-helpers');
 
 // authHelpers.loginRequired,
 //Route to get home page
-router.get('/', authHelpers.loginRequired, function(req, res, next) {
+router.get('/', function(req, res, next) {
   models.Meals.findAll({}).then(function(meals) {
     res.render('meals/index',  {
       meals: meals
