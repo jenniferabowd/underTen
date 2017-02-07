@@ -34,7 +34,7 @@ passport.use(new LocalStrategy({
       console.log("seems like password isn't being validated");
       return done(null, false);
     } else {
-      console.log("here password", password, users[0].dataValues.password)
+      console.log("here password")
       return done(null, user.dataValues);
     }
   })
