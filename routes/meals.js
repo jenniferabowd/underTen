@@ -14,22 +14,24 @@ router.get('/', function(req, res, next) {
 
 router.get('/:id/edit', function(req, res, next) {
   models.Meals.findById(req.params.id).then(function(meals) {
-    res.render('meals/edit', { meals: meals});
+    res.render('meals/edit', { meals : meals });
   });
 });
 
+router.get('/:id', function(req, res, next) {
+  models.Meals.findById(req.params.id).then(function(meals) {
+    res.render('meals/show', { meals : meals });
+  });
+});
 
 router.put('/:id', function(req, res, next) {
   models.Meals.update({
-  name:req.body.meals
+  meals_name:req.body.meals_name
   }, { where: { id: req.params.id } }).then(function() {
     res.redirect('/meals/');
   });
 });
 
-// router.get('/new', function(req, res, next) {
-//   res.render('new')
-// });
 
 router.post('/', function(req, res, next) {
   models.Meals.create({
@@ -43,18 +45,6 @@ router.post('/', function(req, res, next) {
  });
 });
 
-// router.get('/:id', function(req, res, next) {
 
-//   models.Meals.findById(req.params.id).then(function(meal) {
-
-//    res.render('mealId', {
-//     meals: meal
-//     amount: meal.amount,
-//     restaurant_name: meal.restaurant_name
-//     location: meal.location
-//     review: meal.review
-//    });
-//   });
-// });
 
 module.exports = router;
