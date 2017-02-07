@@ -15,14 +15,29 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/new', function(req, res, next) {
+  res.render('meals/new', {
+    title: 'Add A Meal'
+  });
+});
+
+// puts the data from the meal form into the meal table
+router.post('/', function (req, res, next) {
+  models.Meals.create({
+    meal_name: req.body.meal_name,
+    amount: req.body.amount,
+    restaurant_name: req.body.restaurant_name,
+    location: req.body.location,
+    review: req.body.review
+  }).then(function (meals) {
+    res.redirect('/meals');
+  })
+})
+
 router.get('/:id/edit', function(req, res, next) {
   models.Meals.findById(req.params.id).then(function(meals) {
     res.render('meals/edit', { meals : meals });
   });
-});
-
-router.get('/new', function(req, res, next) {
-  res.render('meals/new');
 });
 
 // // deletes the user
