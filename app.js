@@ -14,10 +14,11 @@ var index = require('./routes/index');
 var meals = require('./routes/meals');
 
 var app = express();
+// app.use(methodOverride('_method'));
 var dotenv = require('dotenv').config();
-
-
 app.use(methodOverride('_method'));
+
+// app.use(methodOverride('_method'));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -38,7 +39,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cookieParser());
 app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),

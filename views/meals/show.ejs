@@ -8,6 +8,8 @@
 </head>
 <body>
 <div>
+
+
   <span><%= meals.meals_name %></span><br/>
     <form action="<%= '/meals/' + meals.id + '?_method=DELETE' %>" method="POST">
       <input type="submit" value="Delete" />

@@ -2,7 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 var models = require('../db/models/index');
+var authHelpers = require('../auth/auth-helpers');
 
+
+// authHelpers.loginRequired,
 //Route to get home page
 router.get('/', function(req, res, next) {
   models.Meals.findAll({}).then(function(meals) {
@@ -15,6 +18,31 @@ router.get('/', function(req, res, next) {
 router.get('/:id/edit', function(req, res, next) {
   models.Meals.findById(req.params.id).then(function(meals) {
     res.render('meals/edit', { meals : meals });
+  });
+});
+
+router.get('/new', function(req, res, next) {
+  res.render('meals/new');
+});
+
+// // deletes the user
+// router.post('/:id', function(req, res, next) {
+//   models.User.destroy({
+//     where: {
+//       id: req.params.id
+//     }
+//   }).then(function(user) {
+//     res.redirect('/users');
+//   });
+// });
+
+router.delete('/:id', function(req, res, next) {
+  models.Meals.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(meals) {
+    res.redirect('/meals');
   });
 });
 
@@ -32,7 +60,6 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
-
 router.post('/', function(req, res, next) {
   models.Meals.create({
    meal_name: req.body.meal_name,
@@ -44,7 +71,5 @@ router.post('/', function(req, res, next) {
     res.redirect('/meals')
  });
 });
-
-
 
 module.exports = router;

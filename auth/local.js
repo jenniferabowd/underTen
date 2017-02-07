@@ -17,6 +17,7 @@ init();
 
 passport.use(new LocalStrategy(options, (email, password, done) => {
   // checks to see if the email exists in the database
+  console.log('test');
   models.Users.findAll({
     where: {
       email
