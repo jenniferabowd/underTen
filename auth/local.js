@@ -15,23 +15,27 @@ const options = {};
 // starts the passport node
 init();
 
-passport.use(new LocalStrategy(options, (email, password, done) => {
-  // checks to see if the email exists in the database
-  console.log('test');
-  models.Users.findAll({
+passport.use(new LocalStrategy({
+    usernameField: 'email'},
+     (username, password, done) => {
+      console.log(username)
+  models.Users.findOne({
     where: {
-      email
-    }
+      email: username
+  }
   })
-  .then((users) => {
-    if (users[0] === undefined) {
+  .then((user) => {
+    console.log(user, password)
+    if (!user) {
       return done(null, false);
     }
     // compares the password entered to the password in the database
-    if (!authHelpers.comparePass(password, users[0].dataValues.password)) {
+    if (!authHelpers.comparePass(password, user.dataValues.password)) {
+      console.log("seems like password isn't being validated");
       return done(null, false);
     } else {
-      return done(null, users[0].dataValues);
+      console.log("here password", password, users[0].dataValues.password)
+      return done(null, user.dataValues);
     }
   })
   .catch((err) => { return done(err); });
