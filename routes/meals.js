@@ -7,7 +7,7 @@ var authHelpers = require('../auth/auth-helpers');
 
 // authHelpers.loginRequired,
 //Route to get home page
-router.get('/', function(req, res, next) {
+router.get('/', authHelpers.loginRequired, function(req, res, next) {
   models.Meals.findAll({}).then(function(meals) {
     res.render('meals/index',  {
       meals: meals
@@ -31,8 +31,8 @@ router.post('/', function (req, res, next) {
     review: req.body.review
   }).then(function (meals) {
     res.redirect('/meals');
-  })
-})
+  });
+});
 
 router.get('/:id/edit', function(req, res, next) {
   models.Meals.findById(req.params.id).then(function(meals) {
