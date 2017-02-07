@@ -1,8 +1,93 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+/*$openSans: 'Open Sans', Helvetica, Arial, sans-serif;*/
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+/*
+   @media (max-width: 768px) {
+     font-size: 50%;
+   }*/
+}
+input, button {
+  outline: none;
+  border: none;
+}
 
-a {
-  color: #00B7FF; }
+
+/*cont=background*/
+ .cont {
+   position: relative;
+   height: 100%;
+   background-image: url("../hands.jpg");
+   background-size: cover;
+   overflow: auto;
+ }
+
+.demo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15rem;
+  margin-top: -26.5rem;
+  width: 30rem;
+  height: 53rem;
+  overflow: hidden;
+}
+/*login=login box*/
+.login {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(146, 135, 187, 0.8) 0%, rgba(0,0,0,0.6) 100%);
+  transition: opacity 0.1;
+  transform: scale(1);
+}
+/*login__form=text */
+   .login__form {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    padding: 1.5rem 2.5rem;
+    text-align: center;
+  }
+
+  .login__row {
+    height: 5rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  /*login__input=text input*/
+  .login__input {
+    display: inline-block;
+    width: 22rem;
+    height: 100%;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    background: transparent;
+    color: #FDFCFD;
+  }
+  /*submit button*/
+  .login__submit {
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    margin: 5rem 0 2.2rem;
+    color: rgba(255,255,255,0.8);
+    background: orange;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+  }
+
+  .login__register {
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    margin: 5rem 0 2.2rem;
+    color: rgba(255,255,255,0.8);
+    background: red;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+  }
 
 /*# sourceMappingURL=style.css.map */
