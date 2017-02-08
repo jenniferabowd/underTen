@@ -26,8 +26,23 @@ We met up on Sunday at a meet-up to do some work. We were in constant communicat
 We used ZenHub to track our processes and we did a stand-up on Slack everyday.
 
 ## Screenshots
+This is the screenshot of our homepage.
+![home page](https://i.imgur.com/WairOPa.jpg)
+
+This is our register page
+![register page](https://i.imgur.com/xyOWgIY.png)
+
+This is our login page.
+![login page](https://i.imgur.com/ix2QwoD.png)
+
+This is our meal page.
+![meal page](https://i.imgur.com/4tHHGjA.png)
+
 
 ## Wireframe
+
+This is our wireframe.
+![wireframe](https://i.imgur.com/WrqXZb3.png)
 
 ## MVP
 Create a full stack app that allows General Assembly students to create an account, view meals around campus for less than $10, add meals, edit meals, and delete meals.
