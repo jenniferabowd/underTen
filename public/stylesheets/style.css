@@ -33,9 +33,9 @@ input, button {
 
 .card-action input[type=submit] {
     -webkit-appearance: none;
-    background-color: blue;
+    background-color: #3949ab;
     border: none;
-    color: yellow;
+    color: #ffd54f ;
     margin-right: 2em;
     text-transform: uppercase;
   }
