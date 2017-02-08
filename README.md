@@ -36,3 +36,4 @@ Create a full stack app that allows General Assembly students to create an accou
 - Adding a meal. The function has been created, but it is not working.
 - Edit a meal.
 - Make the ugly buttons pretty then delete the pretty buttons that do not work.
+- Change the colors so it looks good on all computers.
