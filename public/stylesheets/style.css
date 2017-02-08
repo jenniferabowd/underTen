@@ -11,6 +11,7 @@ html, body{
 
 body {
   font-size: 1rem;
+  overflow: scroll;
 }
 
 h1 {
@@ -19,8 +20,6 @@ h1 {
   color:  #ffd54f;
   font-size:86px;
   letter-spacing: 6px;
-
-
 }
 
 input, button {
