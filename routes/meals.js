@@ -6,7 +6,7 @@ var authHelpers = require('../auth/auth-helpers');
 
 
 // authHelpers.loginRequired,
-//Route to get home page
+//Route to get meals page
 router.get('/', authHelpers.loginRequired, function(req, res, next) {
   models.Meals.findAll({}).then(function(meals) {
     res.render('meals/index',  {
@@ -51,6 +51,7 @@ router.get('/:id/edit', function(req, res, next) {
 //   });
 // });
 
+// deletes the meal
 router.delete('/:id', function(req, res, next) {
   models.Meals.destroy({
     where: {
@@ -73,18 +74,6 @@ router.put('/:id', function(req, res, next) {
   }, { where: { id: req.params.id } }).then(function() {
     res.redirect('/meals/');
   });
-});
-
-router.post('/', function(req, res, next) {
-  models.Meals.create({
-   meal_name: req.body.meal_name,
-   amount: req.body.amount,
-   restaurant_name: req.body.restaurant_name,
-   location: req.body.location,
-   review: req.body.review
- }).then(function() {
-    res.redirect('/meals')
- });
 });
 
 module.exports = router;
