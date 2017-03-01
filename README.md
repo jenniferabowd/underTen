@@ -51,7 +51,5 @@ This is our wireframe.
 Create a full stack app that allows General Assembly students to create an account, view meals around campus for less than $10, add meals, edit meals, and delete meals.
 
 ## Unsolved
-- Adding a meal. The function has been created, but it is not working.
-- Edit a meal.
-- Make the ugly buttons pretty then delete the pretty buttons that do not work.
-- Change the colors so it looks good on all computers.
+- Get it so only people who add that meal can delete it.
+- Add an edit meal function.
