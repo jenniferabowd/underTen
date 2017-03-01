@@ -1,37 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Under $10</title>
-  <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
- <link rel='stylesheet' href='/stylesheets/style.css' />
-  <!--Import materialize.css-->
-  <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> -->
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script> -->
-
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-</head>
+  <% include ../partials/head.ejs %>
 <body>
-  <nav>
-    <div class="nav-wrapper #ffd54f amber lighten-2">
-      <a href="#" class="brand-logo center ">Welcome to Under$10</a>
-    </div>
-  </nav>
+  <% include ../partials/header.ejs %>
 
   <% meals.forEach(function(meals) { %>
   <div class="row">
     <div class="col s12 m6">
       <div class="card #3949ab indigo darken-1">
         <div class="card-content h6 white-text">
-          <a class="card-title"  href="<%= `/meals/${meals.id}` %>"><%= meals.amount %></a>
           <ul>
+            <li class="card-title"><%= meals.amount %></li>
             <li><%= meals.meal_name %></li>
             <li><%= meals.restaurant_name %></li>
             <li><%= meals.location %></li>
@@ -52,29 +31,16 @@
     </div>
   </div>
   <% }) %>
+  <div>
+    <a class="waves-effect waves-light btn-large #3949ab indigo darken-1" href="/meals/new">Add Meal</a>
 
-  <a class="waves-effect waves-light btn-large #3949ab indigo darken-1 " href="/meals/new">Add Meal</a>
+    <a class="waves-effect waves-light btn-large #3949ab indigo darken-1 " href="/auth/logout">Log Out</a>
+  </div>
 
-  <a class="waves-effect waves-light btn-large #3949ab indigo darken-1 " href="/auth/logout">Log Out</a>
-  <footer class="page-footer #ffd54f amber lighten-2">
-    <div class="container #ffd54f amber lighten-2">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="#3949ab indigo-text darken-1-text">Under$10</h5>
-          <p class="#3949ab indigo-text darken-1-text">General Assembly Group Project Unit 3</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="#3949ab indigo-text darken-1-text">Happy Eating!</h5>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2017 Copyright
-        <a class="#3949ab indigo-text darken-1 right" href="#!">nom nom nom</a>
-      </div>
-    </div>
-  </footer>
+  </br>
+  </br>
+  <% include ../partials/footer.ejs %>
+
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
