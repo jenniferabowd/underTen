@@ -1,86 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Under $10</title>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
- <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-<nav>
-    <div class="nav-wrapper #ffd54f amber lighten-2">
-      <a href="#" class="brand-logo center ">Welcome to Under$10</a>
-    </div>
-  </nav>
+  <% include ../partials/head.ejs %>
 <body>
- <div class="row">
-    <form class="col s12" action="/meals" method="POST">
-      <div class="row">
-        <div class="input-field col s6">
-          <input name="amount" type="text" class="validate">
-          <label for="amount">Price</label>
-        </div>
-        <div class="input-field col s6">
-          <input name="meal_name" type="text" class="validate">
-          <label for="meal_name">Meal</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12">
-          <input name="restaurant_name" type="text" class="validate">
-          <label for="restaraunt_name">Restaurant</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input name="location" type="text" class="validate">
-          <label for="location">Location</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input name="review" type="text" class="validate">
-          <label for="review">Review</label>
-        </div>
-      </div>
-
-      </div>
-      <div>
-      <a class="waves-effect waves-light btn">button</a>
-            <input type="submit" value="add meal"/>
-      </div>
-    </form>
-  </div>
-  <footer class="page-footer #ffd54f amber lighten-2">
-          <div class="container #ffd54f amber lighten-2">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="#3949ab indigo-text darken-1-text">Under$10</h5>
-                <p class="#3949ab indigo-text darken-1-text">General Assembly Group Project Unit 3</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="#3949ab indigo-text darken-1-text">Happy Eating!</h5>
-              </div>
-            </div>
+  <% include ../partials/header.ejs %>
+   <div class="row">
+      <form class="col s12" action="/meals" method="POST">
+        <div class="row">
+          <div class="input-field col s6">
+            <input name="amount" type="text" class="validate" placeholder="Price">
           </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2017 Copyright
-            <!-- <a class="#3949ab indigo-text darken-1-textt" href="#!">Happy Eating</a> -->
-            </div>
+          <div class="input-field col s6">
+            <input name="meal_name" type="text" class="validate" placeholder="Meal">
           </div>
-        </footer>
-  <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="restaurant_name" type="text" class="validate" placeholder="Restaurant">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="location" type="text" class="validate" placeholder="Location">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input name="review" type="text" class="validate" placeholder="Review">
+          </div>
+        </div>
+
+
+        <div>
+          <input class="waves-effect waves-light btn-large #3949ab indigo darken-1" type="submit" value="add meal"/>
+        </div>
+        </br>
+      </form>
+    </div>
+    <% include ../partials/footer.ejs %>
+    <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
