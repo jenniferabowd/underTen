@@ -1,17 +1,14 @@
-
 html, body{
-  /*font-size: 62.5%;*/
   height: 100%;
   overflow: hidden;
-/*
-   @media (max-width: 768px) {
-     font-size: 50%;
-   }*/
 }
 
 body {
   font-size: 1rem;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1 {
@@ -32,23 +29,21 @@ input, button {
 }
 
 .card-action input[type=submit] {
-    -webkit-appearance: none;
-    background-color: #3949ab;
-    border: none;
-    color: #ffd54f ;
-    margin-right: 2em;
-    text-transform: uppercase;
-  }
+  -webkit-appearance: none;
+  background-color: #3949ab;
+  border: none;
+  color: white;
+  margin-right: 2em;
+  text-transform: uppercase;
+}
 
-
-/*cont=background*/
- .cont {
-   position: relative;
-   height: 100%;
-   background-image: url("../hands.jpg");
-   background-size: cover;
-   overflow: auto;
- }
+.cont {
+ position: relative;
+ height: 100%;
+ background-image: url("../hands.jpg");
+ background-size: cover;
+ overflow: auto;
+}
 
 .demo {
   position: absolute;
@@ -60,7 +55,7 @@ input, button {
   height: 53rem;
   overflow: hidden;
 }
-/*login=login box*/
+
 .login {
   position: relative;
   height: 100%;
@@ -68,57 +63,37 @@ input, button {
   transition: opacity 0.1;
   transform: scale(1);
 }
-/*login__form=text */
-   .login__form {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    padding: 1.5rem 2.5rem;
-    text-align: center;
-  }
 
-  /*.login__row {
-    height: 5rem;
-    padding-top: 1rem;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }*/
-  /*login__input=text input*/
- /* .login__input {
-    display: inline-block;
-    width: 22rem;
-    height: 100%;
-    padding-left: 1.5rem;
-    font-size: 1.5rem;
-    background: transparent;
-    color: #FDFCFD;
-  }*/
-  /*submit button*/
-  .login__submit {
-    position: relative;
-    width: 100%;
-    height: 4rem;
-    margin: 5rem 0 2.2rem;
-    color: #3949ab indigo-text darken-1-text;
-    background: #ffd54f amber lighten-2;
-    font-size: 1.5rem;
-    border-radius: 3rem;
-  }
+.login__form {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
 
-  /*on hold until functionality is complete*/
-  /*.login__register {
-    position: absolute;
-    width: 100%;
-    height: 4rem;
-    margin: 5rem 0 2.2rem;
-    color: rgba(255,255,255,0.8);
-    background: red;
-    font-size: 1.5rem;
-    border-radius: 3rem;
-  }*/
+.login__submit {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  margin: 5rem 0 2.2rem;
+  color: #3949ab indigo-text darken-1-text;
+  background: #ffd54f amber lighten-2;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+}
 
-/*# sourceMappingURL=style.css.map */
+.card-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.button-container {
+  text-align: center;
+}
 
 footer {
   text-align: center;
