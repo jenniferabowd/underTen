@@ -52,7 +52,7 @@ input, button {
   margin-left: -15rem;
   margin-top: -22.5rem;
   width: 30rem;
-  height: 53rem;
+  /*height: 53rem;*/
   overflow: hidden;
 }
 
@@ -93,6 +93,14 @@ input, button {
 
 .button-container {
   text-align: center;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  flex: 1;
 }
 
 footer {
