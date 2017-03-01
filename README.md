@@ -1,7 +1,7 @@
 # Under $10
 A full stack app that allows users to add meals they ate around General Assembly for less than $10.
 
-[Link to our deployed app](https://aqueous-harbor-86966.herokuapp.com/)
+[Link to our deployed app](http://under-ten.herokuapp.com/)
 
 ## Technologies Used
 - EJS
