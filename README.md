@@ -30,16 +30,16 @@ We used ZenHub to track our processes and we did a stand-up on Slack everyday.
 
 ## Screenshots
 This is the screenshot of our homepage.
-![home page](https://i.imgur.com/WairOPa.jpg)
+![home page](https://i.imgur.com/pypO2NJ.jpg)
 
 This is our register page
-![register page](https://i.imgur.com/xyOWgIY.png)
+![register page](https://i.imgur.com/1KQYzby.png)
 
 This is our login page.
-![login page](https://i.imgur.com/ix2QwoD.png)
+![login page](https://i.imgur.com/aEiXSMA.png)
 
 This is our meal page.
-![meal page](https://i.imgur.com/4tHHGjA.png)
+![meal page](https://i.imgur.com/SG8Rqvl.png)
 
 
 ## Wireframe
