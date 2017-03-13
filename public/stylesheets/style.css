@@ -40,7 +40,7 @@ input, button {
 .cont {
  position: relative;
  height: 100%;
- background-image: url("../hands.jpg");
+ background-image: url("../images/hands.jpg");
  background-size: cover;
  overflow: auto;
 }
