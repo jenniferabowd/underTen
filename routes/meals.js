@@ -1,11 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
 var models = require('../db/models/index');
 var authHelpers = require('../auth/auth-helpers');
 
-
-// authHelpers.loginRequired,
 //Route to get meals page
 router.get('/', authHelpers.loginRequired, function(req, res, next) {
   models.Meals.findAll({}).then(function(meals) {
@@ -39,17 +36,6 @@ router.get('/:id/edit', function(req, res, next) {
     res.render('meals/edit', { meals : meals });
   });
 });
-
-// // deletes the user
-// router.post('/:id', function(req, res, next) {
-//   models.User.destroy({
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(function(user) {
-//     res.redirect('/users');
-//   });
-// });
 
 // deletes the meal
 router.delete('/:id', function(req, res, next) {
