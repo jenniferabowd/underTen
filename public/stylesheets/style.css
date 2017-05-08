@@ -15,7 +15,6 @@ h1 {
   font-family: 'Lobster' ,cursive;
   text-align: center;
   color: #4DB6AC;
-  font-size:86px;
   letter-spacing: 6px;
 }
 
@@ -49,10 +48,8 @@ input, button {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: -15rem;
-  margin-top: -22.5rem;
+  transform: translate(-50%, -70%);
   width: 30rem;
-  /*height: 53rem;*/
   overflow: hidden;
 }
 
@@ -75,14 +72,17 @@ input, button {
 }
 
 .login-submit {
-  position: relative;
-  width: 100%;
-  height: 4rem;
-  margin: 5rem 0 2.2rem;
-  color: #3949ab indigo-text darken-1-text;
-  background: #ffd54f amber lighten-2;
-  font-size: 1.5rem;
-  border-radius: 3rem;
+    position: relative;
+    width: 100%;
+    margin: 5rem 0 2.2rem;
+    color: #3F51B5;
+    background: #4DB6AC;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    display: inline-block;
+    height: 4rem;
+    padding-top: .75rem;
+    text-transform: capitalize;
 }
 
 .card-container {
