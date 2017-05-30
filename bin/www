@@ -1,3 +1,5 @@
+// this sets the port for Express to run
+
 #!/usr/bin/env node
 
 /**

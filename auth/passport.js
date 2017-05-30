@@ -1,3 +1,5 @@
+// this file handles encrypting the password
+
 // requires the passport file
 const passport = require('passport');
 // requires the database index

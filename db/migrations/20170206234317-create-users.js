@@ -1,3 +1,5 @@
+// this creates the users table
+
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {

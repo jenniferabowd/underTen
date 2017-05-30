@@ -1,3 +1,5 @@
+// this file creates the user account and sends the logged in users to the meal page
+
 // encrypts the stored password in the database
 const bcrypt = require('bcryptjs');
 // calls the database index

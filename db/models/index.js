@@ -1,3 +1,5 @@
+// Since databases are stored on the harddrive and that is an incredibly slow way to look up information, this file tells the database where the data is stored to make it move much faster
+
 'use strict';
 
 var fs        = require('fs');

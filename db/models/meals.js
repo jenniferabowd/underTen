@@ -1,3 +1,5 @@
+// this is the meals table
+
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Meals = sequelize.define('Meals', {

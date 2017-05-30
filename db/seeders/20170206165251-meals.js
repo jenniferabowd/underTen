@@ -1,3 +1,5 @@
+// this is the seeder file to add in dummy data
+
 'use strict';
 
 module.exports = {

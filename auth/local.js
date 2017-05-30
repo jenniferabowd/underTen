@@ -1,3 +1,5 @@
+// this file handles the user logging in. It also fixed the bug where email as a username bug by setting the email to be a username
+
 // requires passport file within auth
 const passport = require('passport');
 // requires passport-local node
@@ -16,25 +18,22 @@ const options = {};
 init();
 
 passport.use(new LocalStrategy({
+  // fixes the bug where it wasn't letting email be used to login by setting the email to a username
     usernameField: 'email'},
      (username, password, done) => {
-      console.log(username)
   models.Users.findOne({
     where: {
       email: username
   }
   })
   .then((user) => {
-    console.log(user, password)
     if (!user) {
       return done(null, false);
     }
     // compares the password entered to the password in the database
     if (!authHelpers.comparePass(password, user.dataValues.password)) {
-      console.log("seems like password isn't being validated");
       return done(null, false);
     } else {
-      console.log("here password")
       return done(null, user.dataValues);
     }
   })
