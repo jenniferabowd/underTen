@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var models = require('../db/models/index');
-var authHelpers = require('../auth/auth-helpers');
+const express = require('express');
+const router = express.Router();
+const models = require('../db/models/index');
+const authHelpers = require('../auth/auth-helpers');
 
 //Route to get meals page
 router.get('/', authHelpers.loginRequired, function(req, res, next) {
