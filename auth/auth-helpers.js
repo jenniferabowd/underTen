@@ -6,9 +6,9 @@ const bcrypt = require('bcryptjs');
 const models = require('../db/models/index');
 
  // this checks to see if the user's password matches the database password
- function comparePass(userPassword, databasePassword) {
+function comparePass(userPassword, databasePassword) {
   return bcrypt.compareSync(userPassword, databasePassword);
- }
+}
 
  // middleware that we wrote to take the user to the meals page
 function loginRedirect(req, res, next) {
@@ -27,7 +27,7 @@ function createUser(req, res) {
     password: hash,
     first_name: req.body.first_name,
     last_name: req.body.last_name,
-    course: req.body.course
+    course: req.body.course,
   }).then(() => {
     // sends them to the meal page after creating the account
     res.redirect('/meals');
@@ -44,6 +44,6 @@ module.exports = {
   comparePass,
   createUser,
   loginRedirect,
-  loginRequired
-}
+  loginRequired,
+};
 

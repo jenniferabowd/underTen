@@ -12,19 +12,17 @@ const models = require('../db/models/index');
 // requires the auth helps file from within auth
 const authHelpers = require('../auth/auth-helpers');
 
-const options = {};
-
 // starts the passport node
 init();
 
 passport.use(new LocalStrategy({
   // fixes the bug where it wasn't letting email be used to login by setting the email to a username
     usernameField: 'email'},
-     (username, password, done) => {
-  models.Users.findOne({
-    where: {
-      email: username
-  }
+      (username, password, done) => {
+        models.Users.findOne({
+          where: {
+            email: username
+        }
   })
   .then((user) => {
     if (!user) {
